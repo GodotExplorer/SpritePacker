@@ -15,6 +15,10 @@ This tool is developed by godot game engine. If you want to contribute to this p
 ```bash
 git clone git@github.com:GodotExplorer/SpritePacker.git --recurse-submodules
 ```
+Or
+```bash
+git clone https://github.com/GodotExplorer/gdutils.git --recurse-submodules
+```
 - Move and merge the modules folder into your godot source folder
 - [Compile](http://docs.godotengine.org/en/3.0/development/compiling/index.html) the godot editor with the modules
 - Open the `editor` folder with the editor compiled from the source code.
@@ -27,3 +31,4 @@ git clone git@github.com:GodotExplorer/SpritePacker.git --recurse-submodules
 - WeiXiong
 - sersoong
 - 黄伟雄
+- tobia88
