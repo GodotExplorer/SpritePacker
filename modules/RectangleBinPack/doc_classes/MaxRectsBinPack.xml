@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MaxRectsBinPack" inherits="RectangleBinPack" category="Core" version="3.0-rc1">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<demos>
+	</demos>
+	<methods>
+	</methods>
+	<members>
+		<member name="choice_method" type="int" setter="set_choice_method" getter="get_choice_method" enum="MaxRectsBinPack.FreeRectChoiceHeuristic">
+		</member>
+	</members>
+	<constants>
+		<constant name="RectBestShortSideFit" value="0" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectBestLongSideFit" value="1" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectBestAreaFit" value="2" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectBottomLeftRule" value="3" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectContactPointRule" value="4" enum="FreeRectChoiceHeuristic">
+		</constant>
+	</constants>
+</class>

@@ -1,0 +1,3 @@
+[submodule "addons/gdutils"]
+	path = addons/gdutils
+	url = https://github.com/GodotExplorer/gdutils.git

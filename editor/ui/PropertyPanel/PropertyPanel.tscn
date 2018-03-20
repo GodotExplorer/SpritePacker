@@ -1,0 +1,484 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/themes/default.theme" type="Theme" id=1]
+[ext_resource path="res://ui/PropertyPanel/PropertyPanel.gd" type="Script" id=2]
+[ext_resource path="res://ui/PropertyPanel/LineInput.tscn" type="PackedScene" id=3]
+
+[node name="属性面板" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Rect", "Theme" ]
+path_max_x = "布局/属性/Max Size/宽"
+path_max_y = "布局/属性/Max Size/高"
+path_image_path = "布局/属性/Image File/LineEdit"
+path_meta_path = "布局/属性/Data File/LineEdit"
+path_output_dir = "布局/属性/Output Folder/LineEdit"
+path_padding = "布局/属性/Padding/SpinBox"
+path_trim = "布局/属性/Trim/CheckButton"
+path_squared = "布局/属性/Squared/CheckButton"
+path_rotate = "布局/属性/Allow Rotate/CheckButton"
+path_format_option = "布局/属性/Output Format/OptionButton"
+
+[node name="bg" type="ItemList" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+items = [  ]
+select_mode = 0
+allow_reselect = false
+icon_mode = 1
+fixed_icon_size = Vector2( 0, 0 )
+
+[node name="布局" type="VBoxContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_right = -5.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Label" type="Label" parent="布局" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Settings"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="属性" type="VBoxContainer" parent="布局" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 34.0
+margin_right = 1270.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+alignment = 0
+
+[node name="Output Format" parent="布局/属性" index="0" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_right = 1270.0
+title = "Output Image2"
+
+[node name="OptionButton" type="OptionButton" parent="布局/属性/Output Format" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Output Folder" parent="布局/属性" index="1" instance=ExtResource( 3 )]
+
+margin_top = 34.0
+margin_right = 1270.0
+margin_bottom = 64.0
+title = "Image File2"
+
+[node name="LineEdit" type="LineEdit" parent="布局/属性/Output Folder" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 147.0
+margin_right = 1150.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 7.0
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.65
+caret_position = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Button" type="Button" parent="布局/属性/Output Folder" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1154.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.8
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "..."
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Image File" parent="布局/属性" index="2" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 68.0
+margin_right = 1270.0
+margin_bottom = 98.0
+title = "Output Image"
+
+[node name="LineEdit" type="LineEdit" parent="布局/属性/Image File" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="Data File" parent="布局/属性" index="3" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 102.0
+margin_right = 1270.0
+margin_bottom = 132.0
+title = "Output Data"
+
+[node name="LineEdit" type="LineEdit" parent="布局/属性/Data File" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="Padding" parent="布局/属性" index="4" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 136.0
+margin_right = 1270.0
+margin_bottom = 166.0
+title = "Padding"
+
+[node name="SpinBox" type="SpinBox" parent="布局/属性/Padding" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = "px"
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Max Size" parent="布局/属性" index="5" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 170.0
+margin_right = 1270.0
+margin_bottom = 200.0
+title = "Max Size"
+
+[node name="宽" type="SpinBox" parent="布局/属性/Max Size" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 704.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 4.0
+min_value = 10.0
+max_value = 8192.0
+step = 1.0
+page = 0.0
+value = 8192.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = "W:"
+suffix = "px"
+
+[node name="高" type="SpinBox" parent="布局/属性/Max Size" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 708.0
+margin_right = 1270.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 4.0
+min_value = 10.0
+max_value = 8192.0
+step = 1.0
+page = 0.0
+value = 8192.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = "H:"
+suffix = "px"
+
+[node name="Trim" parent="布局/属性" index="6" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 204.0
+margin_right = 1270.0
+margin_bottom = 238.0
+title = "Trim"
+
+[node name="CheckButton" type="CheckButton" parent="布局/属性/Trim" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Squared" parent="布局/属性" index="7" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 242.0
+margin_right = 1270.0
+margin_bottom = 276.0
+title = "Squared"
+
+[node name="CheckButton" type="CheckButton" parent="布局/属性/Squared" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Allow Rotate" parent="布局/属性" index="8" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+margin_top = 280.0
+margin_right = 1270.0
+margin_bottom = 314.0
+title = "Allow Rotate"
+
+[node name="CheckButton" type="CheckButton" parent="布局/属性/Allow Rotate" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 1270.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 8.0
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[connection signal="item_selected" from="布局/属性/Output Format/OptionButton" to="." method="_on_format_selected"]
+
+[connection signal="text_changed" from="布局/属性/Output Folder/LineEdit" to="." method="_on_output_dir_changed"]
+
+[connection signal="pressed" from="布局/属性/Output Folder/Button" to="." method="_on_select_output_dir"]
+
+[connection signal="text_changed" from="布局/属性/Image File/LineEdit" to="." method="_on_out_image_changed"]
+
+[connection signal="text_changed" from="布局/属性/Data File/LineEdit" to="." method="_on_meta_file_changed"]
+
+[connection signal="value_changed" from="布局/属性/Padding/SpinBox" to="." method="_on_padding_value_changed"]
+
+[connection signal="value_changed" from="布局/属性/Max Size/宽" to="." method="_on_max_w_value_changed"]
+
+[connection signal="value_changed" from="布局/属性/Max Size/高" to="." method="_on_max_h_value_changed"]
+
+[connection signal="toggled" from="布局/属性/Trim/CheckButton" to="." method="_on_trim_toggled"]
+
+[connection signal="toggled" from="布局/属性/Squared/CheckButton" to="." method="_on_squared_toggled"]
+
+[connection signal="toggled" from="布局/属性/Allow Rotate/CheckButton" to="." method="_on_allow_rotate_toggled"]
+
+

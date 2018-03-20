@@ -1,0 +1,143 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/themes/default.theme" type="Theme" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "################################################################################
+# 开发者启动界面
+# Created by Geequlim on 2018/01/14
+################################################################################
+extends VBoxContainer
+onready var global = get_node('/root/global')
+
+func _on_startup_pressed():
+	if OK == get_tree().change_scene(\"res://ui/main.tscn\"):
+		global.ui.refresh_theme()
+		queue_free()
+	else:
+		global.utils.message_box(\"错误\", \"无法打开主界面\")"
+_sections_unfolded = [ "Margin", "Theme", "custom_constants" ]
+
+[node name="launcher" type="VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+custom_constants/separation = 10
+alignment = 0
+script = SubResource( 1 )
+_sections_unfolded = [ "Margin", "Theme", "custom_constants" ]
+
+[node name="开发者提示" type="RichTextLabel" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1260.0
+margin_bottom = 660.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "【UI制作提示】
+
+1. 需要与程序交互的UI控件全部用 export(NodePath) 的方式导出
+2. 尽量抽象组件化UI控件，提高复用率
+3. 节点名称尽量使用有意义的命名方式，允许并鼓励使用中文
+4. 组件应具备独立性，不得操作组件外的节点
+5. 组件间通过signal通信，通过setget更新属性并刷新UI元素
+
+UI布局时控件类型的选择流程：
+1. SplitContainer ScrollContainer
+2. HBoxContainer/VBoxContainer
+4. CenterContainer/MarginContainer
+5. GridContainer/PanelContainer
+6. Control
+7. Node2D
+
+【NEVER DO IT】
+[color=red]get_node(\"..\")
+get_node(\"../xxxxx\")[/color]
+
+【编码提示】
+
+全局只提供一个单例[color=green]global[/color]，其他对象需要作为单例的请将其添加到global.gd内，作为该类的成员
+全局global的获取方式为[color=green]get_node('/root/global')[/color], 请不要直接使用[color=red]global[/color]变量，这样会造成它在编辑器解析脚本报错的问题。"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "【UI制作提示】
+
+1. 需要与程序交互的UI控件全部用 export(NodePath) 的方式导出
+2. 尽量抽象组件化UI控件，提高复用率
+3. 节点名称尽量使用有意义的命名方式，允许并鼓励使用中文
+4. 组件应具备独立性，不得操作组件外的节点
+5. 组件间通过signal通信，通过setget更新属性并刷新UI元素
+
+UI布局时控件类型的选择流程：
+1. SplitContainer ScrollContainer
+2. HBoxContainer/VBoxContainer
+4. CenterContainer/MarginContainer
+5. GridContainer/PanelContainer
+6. Control
+7. Node2D
+
+【NEVER DO IT】
+get_node(\"..\")
+get_node(\"../xxxxx\")
+
+【编码提示】
+
+全局只提供一个单例global，其他对象需要作为单例的请将其添加到global.gd内，作为该类的成员
+全局global的获取方式为get_node('/root/global'), 请不要直接使用global变量，这样会造成它在编辑器解析脚本报错的问题。"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Size Flags" ]
+
+[node name="启动" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 584.0
+margin_top = 670.0
+margin_right = 676.0
+margin_bottom = 700.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "前往主界面"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[connection signal="pressed" from="启动" to="." method="_on_startup_pressed"]
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="ShelfBinPack" inherits="RectangleBinPack" category="Core" version="3.0-rc1">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<demos>
+	</demos>
+	<methods>
+	</methods>
+	<members>
+		<member name="choice_method" type="int" setter="set_choice_method" getter="get_choice_method" enum="ShelfBinPack.ShelfChoiceHeuristic">
+		</member>
+		<member name="use_waste_map" type="bool" setter="set_use_waste_map" getter="is_use_waste_map">
+		</member>
+	</members>
+	<constants>
+		<constant name="ShelfNextFit" value="0" enum="ShelfChoiceHeuristic">
+		</constant>
+		<constant name="ShelfFirstFit" value="1" enum="ShelfChoiceHeuristic">
+		</constant>
+		<constant name="ShelfBestAreaFit" value="2" enum="ShelfChoiceHeuristic">
+		</constant>
+		<constant name="ShelfWorstAreaFit" value="3" enum="ShelfChoiceHeuristic">
+		</constant>
+		<constant name="ShelfBestHeightFit" value="4" enum="ShelfChoiceHeuristic">
+		</constant>
+		<constant name="ShelfBestWidthFit" value="5" enum="ShelfChoiceHeuristic">
+		</constant>
+		<constant name="ShelfWorstWidthFit" value="6" enum="ShelfChoiceHeuristic">
+		</constant>
+	</constants>
+</class>

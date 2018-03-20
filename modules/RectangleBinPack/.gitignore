@@ -1,0 +1,9 @@
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.os
+*.dylib
+*.pyc

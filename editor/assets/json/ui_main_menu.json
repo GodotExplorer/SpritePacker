@@ -1,0 +1,177 @@
+[{
+        "title": "File",
+        "items": [{
+                "icon": "res://assets/icons/16px/icon_file.png",
+                "title": "New project",
+                "shortcut": ""
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_folder.png",
+                "title": "Open project...",
+                "shortcut": ""
+            },
+            {
+                "title": "Open recent",
+                "shortcut": "",
+                "items": [{
+                    "icon": "res://assets/icons/16px/icon_file.png",
+                    "title": "Test project..."
+                }]
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_save.png",
+                "title": "Save project",
+                "shortcut": ""
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_save.png",
+                "title": "Save As...",
+                "shortcut": ""
+            },
+            {
+                "title": "Close",
+                "shortcut": ""
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_save_default.png",
+                "title": "Save defaults",
+                "shortcut": ""
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_publish_sprites_sheet.png",
+                "title": "Publish sprite sheet",
+                "shortcut": ""
+            },
+            {
+                "title": "Force publish sprite sheet",
+                "shortcut": ""
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "title": "Preferences...",
+                "shortcut": ""
+            },
+            {
+                "title": "Install Command Line Tool",
+                "shortcut": ""
+            },
+            {
+                "title": "Enter license key",
+                "shortcut": ""
+            },
+            {
+                "title": "Deactivate license",
+                "shortcut": ""
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "title": "Exit",
+                "shortcut": ""
+            }
+        ]
+    },
+    {
+        "title": "Edit",
+        "items": [{
+                "icon": "res://assets/icons/16px/icon_add_sprites.png",
+                "title": "Add sprites...",
+                "shortcut": ""
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_remove_sprites.png",
+                "title": "Remove sprites",
+                "shortcut": ""
+            },
+            {
+                "icon": "res://assets/icons/16px/icon_smartfolder.png",
+                "title": "Add smart folder...",
+                "shortcut": ""
+            }
+        ]
+    },
+    {
+        "title": "View",
+        "items": [{
+            "icon": "res://assets/icons/16px/icon_sprites_preview.png",
+            "title": "Anim preview",
+            "shortcut": ""
+        }]
+    },
+    {
+        "title": "Tools",
+        "items": [{
+            "icon": "",
+            "title": "PVR Viewer...",
+            "shortcut": ""
+        }]
+    },
+    {
+        "title": "Window",
+        "items": [{
+            "icon": "",
+            "type": "checkable",
+            "checked": true,
+            "title": "untitled document",
+            "shortcut": ""
+        }]
+    },
+    {
+        "title": "Help",
+        "items": [{
+                "icon": "",
+                "title": "About TexturePacker",
+                "shortcut": ""
+            },
+            {
+
+                "icon": "",
+                "title": "Documentation...",
+                "shortcut": ""
+            },
+            {
+
+                "icon": "res://assets/icons/16px/icon_show_tutorials.png",
+                "title": "Tutorials...",
+                "shortcut": ""
+            },
+            {
+
+                "icon": "",
+                "title": "License Agreements...",
+                "shortcut": ""
+            },
+            {
+
+                "icon": "",
+                "title": "Acknowledgements...",
+                "shortcut": ""
+            },
+            {
+
+                "icon": "res://assets/icons/16px/icon_feedback.png",
+                "title": "Send feedback...",
+                "shortcut": ""
+            },
+            {
+
+                "icon": "",
+                "title": "Check for updates...",
+                "shortcut": ""
+            }
+        ]
+    }
+
+]

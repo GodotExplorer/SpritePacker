@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="RectangleBinPack" inherits="Reference" category="Core" version="3.0-rc1">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<demos>
+	</demos>
+	<methods>
+		<method name="initialize">
+			<return type="void">
+			</return>
+			<argument index="0" name="p_size" type="Vector2">
+			</argument>
+			<description>
+			</description>
+		</method>
+		<method name="insert">
+			<return type="Rect2">
+			</return>
+			<argument index="0" name="p_rect_size" type="Vector2">
+			</argument>
+			<description>
+			</description>
+		</method>
+		<method name="insert_array">
+			<return type="Array">
+			</return>
+			<argument index="0" name="p_rect_size_arr" type="PoolVector2Array">
+			</argument>
+			<description>
+			</description>
+		</method>
+		<method name="occupancy" qualifiers="const">
+			<return type="float">
+			</return>
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+	</constants>
+</class>

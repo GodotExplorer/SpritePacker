@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="GuillotineBinPack" inherits="RectangleBinPack" category="Core" version="3.0-rc1">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<demos>
+	</demos>
+	<methods>
+	</methods>
+	<members>
+		<member name="choice_method" type="int" setter="set_choice_method" getter="get_choice_method" enum="GuillotineBinPack.FreeRectChoiceHeuristic">
+		</member>
+		<member name="merge" type="bool" setter="set_merge" getter="is_merge">
+		</member>
+		<member name="split_method" type="int" setter="set_split_method" getter="get_split_method" enum="GuillotineBinPack.GuillotineSplitHeuristic">
+		</member>
+	</members>
+	<constants>
+		<constant name="RectBestAreaFit" value="0" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectBestShortSideFit" value="1" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectBestLongSideFit" value="2" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectWorstAreaFit" value="3" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectWorstShortSideFit" value="4" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="RectWorstLongSideFit" value="5" enum="FreeRectChoiceHeuristic">
+		</constant>
+		<constant name="SplitShorterLeftoverAxis" value="0" enum="GuillotineSplitHeuristic">
+		</constant>
+		<constant name="SplitLongerLeftoverAxis" value="1" enum="GuillotineSplitHeuristic">
+		</constant>
+		<constant name="SplitMinimizeArea" value="2" enum="GuillotineSplitHeuristic">
+		</constant>
+		<constant name="SplitMaximizeArea" value="3" enum="GuillotineSplitHeuristic">
+		</constant>
+		<constant name="SplitShorterAxis" value="4" enum="GuillotineSplitHeuristic">
+		</constant>
+		<constant name="SplitLongerAxis" value="5" enum="GuillotineSplitHeuristic">
+		</constant>
+	</constants>
+</class>

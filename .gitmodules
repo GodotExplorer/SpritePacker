@@ -1,0 +1,9 @@
+[submodule "modules/NativeDialogs"]
+	path = modules/NativeDialogs
+	url = git@github.com:GodotExplorer/NativeDialogs.git
+[submodule "editor/addons/FontAwesome"]
+	path = editor/addons/FontAwesome
+	url = git@github.com:GodotExplorer/FontAwesome.git
+[submodule "editor/addons/gdutils"]
+	path = editor/addons/gdutils
+	url = git@github.com:GodotExplorer/gdutils.git

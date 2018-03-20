@@ -1,0 +1,250 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/themes/default.theme" type="Theme" id=1]
+[ext_resource path="res://ui/Menu/MainMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/Toolbar/MainToolbar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/ImageList/ImageList.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/PackedPage/PackedPage.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/PropertyPanel/PropertyPanel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/StatusBar/StatusBar.tscn" type="PackedScene" id=7]
+
+[node name="main" type="VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+custom_constants/separation = 0
+alignment = 0
+_sections_unfolded = [ "Theme" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="菜单栏" type="VBoxContainer" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 0, 26 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="main_menu" parent="菜单栏" index="0" instance=ExtResource( 2 )]
+
+margin_top = 0.0
+margin_bottom = 0.0
+rect_clip_content = false
+
+[node name="工具栏" type="VBoxContainer" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 26.0
+margin_right = 1280.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 0, 50 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MainToolbar" parent="工具栏" index="0" instance=ExtResource( 3 )]
+
+margin_bottom = 73.0
+
+[node name="操作区" type="HSplitContainer" parent="." index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 99.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="图片库" type="VBoxContainer" parent="操作区" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 252.0
+margin_bottom = 621.0
+rect_min_size = Vector2( 200, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="输入图片列表" parent="操作区/图片库" index="0" instance=ExtResource( 4 )]
+
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 252.0
+margin_bottom = 621.0
+rect_clip_content = false
+size_flags_vertical = 3
+
+[node name="编辑区" type="HSplitContainer" parent="操作区" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 260.0
+margin_right = 1280.0
+margin_bottom = 621.0
+rect_min_size = Vector2( 600, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 4.0
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="预览区" type="VBoxContainer" parent="操作区/编辑区" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 692.0
+margin_bottom = 621.0
+rect_min_size = Vector2( 200, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+alignment = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="可滚动区" type="ScrollContainer" parent="操作区/编辑区/预览区" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 692.0
+margin_bottom = 621.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = true
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="居中容器" type="CenterContainer" parent="操作区/编辑区/预览区/可滚动区" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 692.0
+margin_bottom = 621.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="合并结果" parent="操作区/编辑区/预览区/可滚动区/居中容器" index="0" instance=ExtResource( 5 )]
+
+margin_left = 346.0
+margin_top = 310.0
+margin_right = 346.0
+margin_bottom = 310.0
+rect_clip_content = false
+
+[node name="属性面板" parent="操作区/编辑区" index="1" instance=ExtResource( 6 )]
+
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_right = 1020.0
+margin_bottom = 621.0
+rect_min_size = Vector2( 320, 0 )
+path_image_path = "布局/属性/Image File/LineEdit"
+path_meta_path = "布局/属性/Data File/LineEdit"
+path_output_dir = "布局/属性/Output Folder/LineEdit"
+path_format_option = "布局/属性/Output Format/OptionButton"
+
+[node name="状态栏" parent="." index="3" instance=ExtResource( 7 )]
+
+visible = false
+margin_top = 690.0
+margin_bottom = 720.0
+rect_clip_content = false
+_sections_unfolded = [ "Focus", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+
